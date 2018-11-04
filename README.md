@@ -1,4 +1,4 @@
-# Implementation of Gauss Jordan matrix inversion using CUDA
+# Implementation of Gauss Jordan matrix inversion on GPU
 
 This repository aims to implement the algorithm stated in <a href='https://www.sciencedirect.com/science/article/pii/S0045794913002095'> this research paper </a>
 
@@ -9,7 +9,7 @@ Inputs have not been uploaded to GitHub due to it's size. Inputs can be generate
 python3 .\input_generator.py
 ```
 
-### CUDA Implementation :
+#### CUDA Implementation 
 Make sure to have cuDNN 9.0 and the CUDA Toolkit 10.0 (or any other CUDA Toolkit version compatible with Nvidia GTX1060 GPU)
 
 ```
@@ -17,7 +17,7 @@ nvcc .\Gauss_Jordan_inversion_gpu.cu -o gpu.exe
 .\gpu.exe
 ```
 
-### CPU Implementation :
+#### CPU Implementation 
 
 ```
 g++ .\Gauss_Jordan_inversion_cpu.cpp -o cpu.exe
