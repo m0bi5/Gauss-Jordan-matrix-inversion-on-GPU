@@ -3,9 +3,10 @@
 #include<iostream>
 #include<fstream>
 #include<time.h>
+#include <stdlib.h>
 
-const int dimension = 1000;//dimension
-float augmentedmatrix[dimension][2 * dimension];    /* 2D array declared to store augmented matrix */
+int dimension = 1000;//dimension
+float augmentedmatrix[1000][2000];    /* 2D array declared to store augmented matrix */
 #define minvalue 0.0005
 
 int i, j, k, temp;     /* declaring counter variables for loops */
@@ -13,7 +14,7 @@ int i, j, k, temp;     /* declaring counter variables for loops */
 using namespace std;
 
 //Put matrix to a txt file,j is the beginning col
-void out_txt(string filename, int j_begin){
+/*void out_txt(string filename, int j_begin){
 	ofstream ofile;               //define output file
 	ofile.open(filename, ios::out | ios::app);     //open output file
 	for (i = 0; i < dimension; i++){
@@ -22,16 +23,16 @@ void out_txt(string filename, int j_begin){
 		ofile << "\n";
 	}
 	ofile.close();                //close output file
-}
+}*/
 
 /*   storing augmented matrix as a matrix of dimension
 (dimension)x(2*dimension) in 2D array  */
-void matrix_read(){
+void matrix_read(char *filename,int dimension){
 	FILE *fp;
 	int row, col;
 	//char str[50];
 
-	fp = fopen("/input/randomMatrix_1000.txt", "r");//open matrix file
+	fp = fopen(filename, "r");//open matrix file
 	if (fp == NULL)//open failed
 		return;
 
@@ -62,7 +63,7 @@ void matrix_read(){
 }
 
 /* using gauss-jordan elimination */
-void gauss_jordan(){
+void gauss_jordan(int dimension){
 	float temporary, r;
 
 	for (j = 0; j<dimension; j++){
@@ -105,7 +106,7 @@ void gauss_jordan(){
 	}
 }
 
-void display(){
+void display(int dimension){
 	/* Display augmented matrix */
 
 	printf("\n After Gauss-Jordan elimination, augmented matrix is : \n\n");
@@ -127,15 +128,17 @@ void display(){
 	}
 }
 
-int main(){
-	printf("INVERSE OF NON-SINGULAR MATRIX BY GAUSS-JORDAN ELIMINATION METHOD\n");
+int main(int argc, char **argv){
+	//printf("INVERSE OF NON-SINGULAR MATRIX BY GAUSS-JORDAN ELIMINATION METHOD\n");
+	char *p;
+	dimension=strtol( argv[2],&p, 10);
 
 	/*   storing augmented matrix as a matrix of dimension
 	(dimension)x(2*dimension) in 2D array  */
-	matrix_read();
+	matrix_read(argv[1],dimension);
 
 	//Put the augmented matrix to a txt file
-	out_txt("augmentedmatrix.txt",0);
+	//out_txt("augmentedmatrix.txt",0);
 
 	//time start
 	clock_t start, finish;
@@ -143,20 +146,19 @@ int main(){
 	start = clock();
 
 	/* using gauss-jordan elimination */
-	gauss_jordan();
+	gauss_jordan(dimension);
 
 	finish = clock();
-	totaltime = (double)(finish - start);
-	cout << "CPU Time - inverse:\n" << totaltime << "ms£¡" << endl;
+	totaltime = (double)(finish - start)/ ((double) CLOCKS_PER_SEC);
+	cout <<  totaltime;
 
 	//Put the inverse matrix to a txt file
-	out_txt("inverse.txt",dimension);
+	//out_txt("inverse.txt",dimension);
 
 	//display matrix
-	//display();
+	//display(dimension);
 
-	printf("Successful!\n");
+	//printf("Successful!\n");
 
-	system("pause");
 	return 0;
 }
