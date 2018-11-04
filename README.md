@@ -29,5 +29,14 @@ For retrieving multiple results of the CPU implemetation, make the executable an
 python3 .\cpu_results_getter.py
 ```
 
-### Results
+## Results
 
+
+![CPU](https://github.com/m0bi5/Gauss-Jordan-matrix-inversion-on-GPU/tree/master/results/cpu_all.png)
+![GPU](https://github.com/m0bi5/Gauss-Jordan-matrix-inversion-on-GPU/tree/master/results/gpu_all.png)
+
+![Dense matrix](https://github.com/m0bi5/Gauss-Jordan-matrix-inversion-on-GPU/tree/master/results/dense.png)
+![Sparse matrix](https://github.com/m0bi5/Gauss-Jordan-matrix-inversion-on-GPU/tree/master/results/sparse.png)
+![Hollow matrix](https://github.com/m0bi5/Gauss-Jordan-matrix-inversion-on-GPU/tree/master/results/hollow.png)
+![Band matrix](https://github.com/m0bi5/Gauss-Jordan-matrix-inversion-on-GPU/tree/master/results/band.png)
+![Identity matrix](https://github.com/m0bi5/Gauss-Jordan-matrix-inversion-on-GPU/tree/master/results/identity.png)
