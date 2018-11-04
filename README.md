@@ -31,14 +31,26 @@ python3 .\cpu_results_getter.py
 
 ## Results
 
-<img src="results/cpu_all.png">
+
+#### CPU Execution Time 
+<img height="60%" width="60%" src="results/cpu_all.png">
+
+#### GPU Execution Time 
+<img height="60%" width="60%"  src="results/gpu_all.png">
+
+#### GPU vs CPU Execution Time for Dense Matrix 
+<img height="60%" width="60%"  src="results/dense.png">
+
+#### GPU vs CPU Execution Time for Sparse Matrix 
+<img height="60%" width="60%"  src="results/sparse.png">
+
+#### GPU vs CPU Execution Time for Hollow Matrix 
+<img height="60%" width="60%"  src="results/hollow.png">
+
+#### GPU vs CPU Execution Time for Band Matrix 
+<img height="60%" width="60%"  src="results/band.png">
+
+#### GPU vs CPU Execution Time for Identity Matrix 
+<img height="60%" width="60%"  src="results/identity.png">
 
 
-![CPU](https://github.com/m0bi5/Gauss-Jordan-matrix-inversion-on-GPU/tree/master/results/cpu_all.png)
-![GPU](https://github.com/m0bi5/Gauss-Jordan-matrix-inversion-on-GPU/tree/master/results/gpu_all.png)
-
-![Dense matrix](https://github.com/m0bi5/Gauss-Jordan-matrix-inversion-on-GPU/tree/master/results/dense.png)
-![Sparse matrix](https://github.com/m0bi5/Gauss-Jordan-matrix-inversion-on-GPU/tree/master/results/sparse.png)
-![Hollow matrix](https://github.com/m0bi5/Gauss-Jordan-matrix-inversion-on-GPU/tree/master/results/hollow.png)
-![Band matrix](https://github.com/m0bi5/Gauss-Jordan-matrix-inversion-on-GPU/tree/master/results/band.png)
-![Identity matrix](https://github.com/m0bi5/Gauss-Jordan-matrix-inversion-on-GPU/tree/master/results/identity.png)
