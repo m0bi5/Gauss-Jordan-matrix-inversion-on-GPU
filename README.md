@@ -31,6 +31,8 @@ python3 .\cpu_results_getter.py
 
 ## Results
 
+<img src="https://github.com/m0bi5/Gauss-Jordan-matrix-inversion-on-GPU/tree/master/results/cpu_all.png">
+
 
 ![CPU](https://github.com/m0bi5/Gauss-Jordan-matrix-inversion-on-GPU/tree/master/results/cpu_all.png)
 ![GPU](https://github.com/m0bi5/Gauss-Jordan-matrix-inversion-on-GPU/tree/master/results/gpu_all.png)
